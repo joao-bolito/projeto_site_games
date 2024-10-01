@@ -1,0 +1,387 @@
+/*|====================| */
+/*|  Resetando o HTML  | */
+/*|====================| */
+*{
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline; /* define o alinhamento vertical de um elemento */
+    list-style: none;
+    border: 0;
+}
+
+
+ /* ===============================================================================================================*/
+
+
+
+/* |=============| */
+/* |  cabeçalho  | */
+/* |=============| */
+
+.cabecalho{
+    background:#FFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0px 0px;
+}
+
+.container div {
+    padding: 0;
+    margin: 0;
+}
+
+.container div a{
+    display: inline-block;  /* Mostra os links de forma horizontal */
+    color: #111;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.jogo:hover{
+    border: #000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.dispositivos:hover{
+    border: #000;
+    border-style:  solid;
+    border-radius: 10px;
+}
+
+.suporte:hover{
+    border: #000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.colecao:hover{
+    border: #000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.minha-conta:hover{
+    border: #000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+
+/* |============================================================================================| */
+/* |  Estilizando o navegar para quando o mouse ficar encima dele, descer uma lista com opções  | */
+/* |============================================================================================| */
+.navegar{
+    position: relative;
+    cursor: pointer;
+}
+
+ul{
+    display: inline; /* O display inline não tem efeito de altura e largura */
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    display: inline-block; /* O inline-block permite definir um valor de altura e largura e não add as quebras de linhas que o display block faz */
+}
+
+
+.navegar:hover ul{
+    display: block;
+}
+
+.navegar ul{
+    position: absolute; /* Os elementos posicionados absolutos são removidos do fluxo normal e podem sobrepor elementos. */
+    width: 200px;
+    display: none; /* Não deixa o conteúdo ser mostrado na tela */ 
+    border-radius: 4px;
+}
+
+.navegar ul li{
+    background: #fff;
+    display: block;
+}
+
+.navegar ul li a{
+    display: block !important;
+}
+
+.playstation a:hover{
+    color: #0000CD;
+} 
+
+.xbox a:hover{
+    color: #0f0;
+}
+
+.nintendo a:hover{
+    color: #f00;
+}
+
+.navegar:hover .seta-para-baixo div{
+    transform: rotate(90deg);
+    top: 20%;
+}
+
+
+
+/* |==================================================================| */
+/* |  Ainda no navegar fazer uma setinha como se ela abrisse a lista  | */
+/* |==================================================================| */
+.seta-para-baixo{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right: 15px;
+    top: 40%;
+    background:white;
+}
+.seta-para-baixo > div{
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+    transition: .2s linear;
+}
+
+
+/* ============================================================================================================================= */
+
+/* |==============================| */
+/* |  Estilizando a logo do site  | */
+/* |==============================| */
+.logo{
+    width: 140px;
+    height: 50px;
+    /* overflow: hidden; */
+}
+
+.logo a img{
+    position: relative;
+    top: -40px;
+    width: 100px;
+    height: 100px;
+    object-fit:scale-down ;
+}
+
+
+/* ============================================================================================================================ */
+
+/* |=========================| */
+/* |  Trabalhando meu slide  | */
+/* |=========================| */
+
+/* 1° é pego o slider, porque é o que está em volta de todo o conteúdo dentro do site */
+.slider{
+
+    /* O slider está todo o meu conteúdo dessa parte do slides, e ele tem uma altura e largura especifica, sendo assim as imagens 
+    ultrapassam esse tamanho de altura e largura. Por conta disso, preciso usar o overflow:hidden, ele faz tudo o que for ultrapassado
+    da minha altura e largura do slider some */
+
+    margin: 0 auto; /* dei uma margem 0 em cima e em baixo e auto na direita e esquerda*/
+    padding-top: 75px;
+    width: 100%;
+    height: 600px; 
+    overflow: hidden; /* A propriedade CSS overflow controla o que acontece com o conteúdo grande demais para caber em uma área. */
+}
+
+/* 2° Pego a div mais interna, que a slides  */
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    align-items: flex-start;
+}
+
+/* |=====================| */
+/* |  Ocultar os inputs  | */
+/* |=====================| */
+
+.slides input{
+    display: none;  /* Os radios somem. Poís não precisamos que ele apareça, só precisamos que ele fique marcado*/
+}
+
+/* |=====================================| */
+/* |  Classe onde tem as imagens dentro  | */
+/* |=====================================| */
+.slide{
+    width: 25%; /* Quero que todas as imagens tenham o mesmo tamanho */ 
+    transition: .6s; /* Quando for para outras imagens, ela meio que faz o efeito de rolagem */ 
+}
+
+/* |=============================| */
+/* |  Personalizando as imagens  | */
+/* |=============================| */
+/* Coloquei as imagens no mesmo tamanho */
+.slide img{
+    object-fit: cover;
+    width: 80%;
+    height: 100%;
+}
+
+.navegação-manual{
+    position: absolute; /* Esse absolute faz com que seja possivel mover esse elemento somente dentro do elemento pai, porque o elemento pai tem um absolute também */
+    left: 25%;
+    width: 800px;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+
+/* |=================================| */
+/* |  Espaçamento dos radios button  | */
+/* |=================================| */
+.manual-btn:not(:last-child){  /* Aqui eu aplico em todas as imagens menos na ultima (por isso tem escrito last-child) */
+    margin-right: 40px;
+}
+
+
+.manual-btn:hover{   /* Quando passar o mouse em cima */
+    background-color: #FFF;
+}
+
+
+/* |==================================================| */
+/* |  Manipulando quando cada button for selecionado  | */
+/* |==================================================| */
+/* Manipulo pelo Id, por isso o id foi colocado */
+/* Para acessar o id eu coloco a # */
+/* Replico esse código nas demais imagens */
+
+
+#radio1:checked ~ .first{ /* Quando o rádio um for selecionado */ /* Uso o atributo irmão (~) e quando aparecer o primeiro slide acontece o comando, no caso, ele começa padrão*/
+    margin-left: 0; /* Isso porque se ele for ativo e for o primeiro, eu quero que ele comece daqui. se não for, eu quero jogar a imagem para a esquerda */
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;          /* O menos é porque eu quero que minha imagem vá para a direita */
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+/* ============================================================================================================ */
+
+/* |==============================| */
+/* |  Parte de baixo do meu site  | */
+/* |==============================| */
+.destaque{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+}
+
+.destaque h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 9000; /* A font-weightpropriedade define como caracteres grossos ou finos no texto devem ser exibidos. */
+    color: black;
+}
+
+
+/* Parte do destaque/ galeria de jogos */
+.gallery-container{
+    display: flex;
+    margin-bottom: 50px ;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Espaçamento entre os elementos, mas mesmo assim ficam no centro, não fica um em cada canto */
+    gap: 2vw;
+    padding: 0 1vw;
+}
+
+.gallery-items{
+    width: 340px;
+    height: 320px;
+    box-shadow: 5px 5px 5px #0008;
+    flex-grow: 1; /* Esta propriedade especifica quanto espaço restante no contêiner flexível deve ser atribuído ao item (o fator de crescimento flexível). */
+    transition:transform .5s linear;
+}
+
+.gallery-items:hover{
+    transform: scale(1.2);
+}
+
+.gallery-items img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover; /* A propriedade CSS object-fité usada para especificar como um <img> ou <video> deve ser redimensionado para caber em seu contêiner.   */
+
+}
+
+
+
+/* ================================================================================= */
+
+
+
+/* |========================| */
+/* |  Estilizando o footer  | */
+/* |========================| */
+.footer{
+    background: black;
+    height: 200px;
+}
+
+.conteudo-footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+
+.conteudo-footer h3 a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.conteudo-footer h3 a:hover{
+    color: #C0C0C0;
+}

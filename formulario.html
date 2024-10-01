@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- o content="width=device-width" iguala a largura da minha tela em qualquer tela(responsividade).
+        o "o initial-scale=1.0" define o nível de zoom(nenhum zoom será aplicado) -->
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>GameShop</title>
+        <link rel="stylesheet" href="./formulario.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <div class="container">
+                <div class="jogo">
+                    <a href="../html/jogos.html">Jogos</a>
+                </div>
+                <div class="dispositivos">
+                    <a href="../html/dispositivos.html">Dispositivos</a>
+                </div>
+                <div class="suporte">
+                    <a href="../html/suporte.html">Suporte</a>
+                </div>
+                <div class="logo">
+                    <a href="../home.html"><img src="../imagens/_Red Modern Proplayer Logo Template (1).png" alt="Logo site game shop"></a>
+                </div>
+                <div class="colecao">
+                    <a href="../html/colecao.html">Coleções</a>
+                </div>
+                <div class="navegar">
+                    <div class="seta-para-baixo"><div></div></div>
+                    <a>Navegar</a>
+                    <ul>
+                        <li class="playstation"><a href="../html/playststion.html">Playstation</a></li>
+                        <li class="xbox"><a href="../html/xbox.html">Xbox</a></li>
+                        <li class="nintendo"><a href="../html/nintendo.html">Nintendo</a></li>
+                    </ul>
+                </div>
+                <div class="minha-conta">
+                    <div class="outra-seta-para-baixo"><div></div></div>
+                    <a href="./index.html">Entrar</a>
+                </div>
+            </div>
+        </header>
+        <!-- class= wrapper serve para envolver outros outros objetos afim de adicionar outros atributos ou melhor organiza-los no código-->
+        <div class="wrapper">
+            <a href="#"></a><h2>Registro</h2>
+            <form id="formCadastro" name="formulario" action="#">
+                <div class="input-box">
+                    <input type="text" id="userName" placeholder="Insira seu nome" required>
+                </div>
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="insira seu email" required>
+                </div>
+                <div class="input-box">
+                    <input id="txtSenha" type="password" placeholder="Crie uma senha" minlength="5" required> <!-- minlength e maxlenght são usadas para limitar caracteres em um campo input-->
+                </div>
+                <div class="input-box">
+                    <input id="repetir_senha" type="password" placeholder="Repita a senha" required>
+                </div>
+                <div class="policy">
+                    <input type="checkbox" required>
+                    <h3>Aceito todos os termos e condições</h3>
+                </div>
+                <div class="input-box button">
+                    <input type="submit" value="Confirmar">
+                </div>
+                <div class="text">
+                    <h3>Já possui conta? <a href="../home.html">Login</a></h3>
+                </div>
+            </form>
+        </div>
+
+
+
+        <script>
+
+
+            const form = document.getElementById("formCadastro")
+            const password = document.getElementById("txtSenha")
+            const repetirSenha = document.getElementById("repetir_senha")
+
+
+            // |============================|
+            // |  Add evento no formulário  |
+            // |============================|
+            form.addEventListener('submit', (e) => {        // addEventListener: registra uma única espera de evento em um único alvo. Nesse código aqui o evento que eu criei é o evento de submit (enviar o formulário). No caso aqui eu preciso tirar o comportamento padrão do browser por isso que tem o (e)
+                e.preventDefault()                          // O preventDefault tira o comportamento que os elementos vem por padrão. Em formulários geralmente é feito isso. 
+
+
+                // |================================================|
+                // |  Função executada ao ser enviado o formulário  |
+                // |================================================|
+                checkInputs()
+            })
+
+
+            // |==============================|
+            // |  Criando função checkInputs  |
+            // |==============================|
+
+            function checkInputs(){                         //Essa função vai fazer as validações
+                        
+                const passwordValue = txtSenha.value.trim()       // A função trim() que tira os espaços em brancos, ou seja se a pessoa dar vários espaçamentos, não vai importar
+                const repetirSenha = repetir_senha.value.trim()
+
+
+                // |=============================|
+                // |  Iniciando as verificações  |
+                // |=============================|
+
+                if(passwordValue !== repetirSenha){
+                    alert("Senhas não correspondentes");
+                }
+            }
+
+        </script>
+
+
+    </body>
+</html>

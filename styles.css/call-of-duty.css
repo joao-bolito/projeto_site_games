@@ -1,0 +1,183 @@
+/*|====================| */
+/*|  Resetando o HTML  | */
+/*|====================| */
+*{
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline; /* define o alinhamento vertical de um elemento */
+    list-style: none;
+    border: 0;
+}
+
+
+/* |=====================| */
+/* |  Cabeçalho do site  | */
+/* |=====================| */
+
+.cabecalho{
+    background:#FFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0px 0px;
+}
+
+.container div {
+    padding: 0;
+    margin: 0;
+}
+
+.container div a{
+    display: inline-block;
+    color: #111;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 2px; /* Defina o espaçamento entre letras para os elementos */
+}
+
+.jogo:hover{
+    border: #000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.dispositivos:hover{
+    border: #000;
+    border-style:  solid;
+    border-radius: 10px;
+}
+
+.suporte:hover{
+    border: #000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.colecao:hover{
+    border: #000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.minha-conta:hover{
+    border: #000;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+
+/* |============================================================================================| */
+/* |  Estilizando o navegar para quando o mouse ficar encima dele, descer uma lista com opções  | */
+/* |============================================================================================| */
+.navegar{
+    position: relative;
+    cursor: pointer;
+}
+
+ul{
+    display: inline; /* O display inline não tem efeito de altura e largura */
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    display: inline-block; /* O inline-block permite definir um valor de altura e largura e não add as quebras de linhas que o display block faz */
+}
+
+
+.navegar:hover ul{
+    display: block;
+}
+
+.navegar ul{
+    position: absolute; /* Os elementos posicionados absolutos são removidos do fluxo normal e podem sobrepor elementos. */
+    width: 200px;
+    display: none; /* Não deixa o conteúdo ser mostrado na tela */ 
+    border-radius: 4px;
+}
+
+.navegar ul li{
+    background: #fff;
+    display: block;
+}
+
+.navegar ul li a{
+    display: block !important;
+}
+
+.playstation a:hover{
+    color: #0000CD;
+} 
+
+.xbox a:hover{
+    color: #0f0;
+}
+
+.nintendo a:hover{
+    color: #f00;
+}
+
+.navegar:hover .seta-para-baixo div{
+    transform: rotate(90deg);
+    top: 20%;
+}
+
+
+
+/* |==================================================================| */
+/* |  Ainda no navegar fazer uma setinha como se ela abrisse a lista  | */
+/* |==================================================================| */
+.seta-para-baixo{
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right: 15px;
+    top: 40%;
+    background:white;
+}
+.seta-para-baixo > div{
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+    transition: .2s linear;
+}
+
+
+
+
+/* |==============================| */
+/* |  Estilizando a logo do site  | */
+/* |==============================| */
+.logo{
+    width: 140px;
+    height: 50px;
+    /* overflow: hidden; */
+}
+
+.logo a img{
+    position: relative;
+    top: -40px;
+    width: 100px;
+    height: 100px;
+    object-fit:scale-down ;
+}
+
+
+
+/* |==============================| */
+/* |  Estilizando banner do jogo  | */
+/* |==============================| */
+
+.cod{
+    
+}

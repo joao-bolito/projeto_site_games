@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameShop</title>
+    <link rel="stylesheet" href="./styles.css/home.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="jogo">
+                <a href="./html/jogos.html">Jogos</a>
+            </div>
+            <div class="dispositivos">
+                <a href="./html/dispositivos.html">Dispositivos</a>
+            </div>
+            <div class="suporte">
+                <a href="./html/suporte.html">Suporte</a>
+            </div>
+            <div class="logo">
+                <a href="./home.html"><img src="./imagens/_Red Modern Proplayer Logo Template (1).png" alt="Logo site game shop"></a>
+            </div>
+            <div class="colecao">
+                <a href="./html/colecao.html">Coleções</a>
+            </div>
+            <div class="navegar">
+                <div class="seta-para-baixo"><div></div></div>
+                <a>Navegar</a>
+                <ul>
+                    <li class="playstation"><a href="./html/playststion.html">Playstation</a></li>
+                    <li class="xbox"><a href="./html/xbox.html">Xbox</a></li>
+                    <li class="nintendo"><a href="./html/nintendo.html">Nintendo</a></li>
+                </ul>
+            </div>
+            <div class="minha-conta">
+                <div class="outra-seta-para-baixo"><div></div></div>
+                <a href="./formulario.html">Entrar</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- |===================| -->
+    <!-- |  Inicio do slide  | -->
+    <!-- |===================| -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Radios Buttons -->
+            <input type="radio" name="radio-btn" id="radio1" checked>   <!-- Coloco o mesmo nome, para ser associado no mesmo grupo -->
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <!-- |=====================| -->
+            <!-- |  imagem dos slides  | -->
+            <!-- |=====================| -->
+
+            <div class="slide first"> <!-- Essa classe precisa ser diferente, para eu conseguir identificar que essa é a primeira imagem-->
+                <a href="/html/god-of-war.html"><img src="./imagens/god of war.jpg" alt="Jogo God of War"></a>
+            </div>
+            <div class="slide">
+                <a href="/html/resident-evil-4.html"><img src="./imagens/Resident-Evil-4-Remake-9.jpg" alt="Jogo Resident Evil 4"></a>
+            </div>
+            <div class="slide">
+                <a href="/html/the-last-of-us.html"><img src="./imagens/the-last-of-us-part-1-remake-tudo-sobre-plataformas-preco-la_qvue.jpg" alt="Jogo The last of Us"></a>
+            </div>
+            <div class="slide">
+                <a href="/html/dead-space.html"><img src="./imagens/DEAD-SPACE-REMAKE.avif" alt="Jogo deadSpace"></a>
+            </div>
+
+
+            <!-- |========================| -->
+            <!-- |  Navegação automatica  | -->
+            <!-- |========================| -->
+            <div class="navigation-auto"> <!-- Aqui ficaram os botões para as pessoas navegarem -->
+                <div class="auto-btn1"></div>  
+                <div class="auto-btn2"></div>  
+                <div class="auto-btn3"></div>  
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+
+        <!-- |--------------------------------------------------------------------| -->
+        <!-- |  Estarei referenciando meus radios aqui. Pra isso faço essas label | -->
+        <!-- |--------------------------------------------------------------------| -->
+        <div class="navegação-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+
+<!-- =========================================================================================================================== -->
+
+    <!-- |==========================================| -->
+    <!-- |  Começando a parte de baixo do meu site  | -->
+    <!-- |==========================================| -->
+    <div class="destaque">
+        <h1>Em destaque:</h1>
+    </div>
+    <nav class="gallery-container">
+        <a href="./html/god-of-war.html" class="gallery-items"><img src="./imagens/god-of-war-ragnarok_capa.jpg" alt="Jogo God of war"></a>
+        <a href="./html/the-last-of-us.html" class="gallery-items"><img src="./imagens/The-Last-of-Us-Part-I-capa - Copia.jpg" alt="Jogo the last of us"></a>
+        <a href="./html/call-of-duty.html" class="gallery-items"><img src="./imagens/call-of-duty-modern-warfare_capa.jpg" alt="Jogo Call of Duty"></a>
+        <a href="./html/fifa-23.html" class="gallery-items"><img src="./imagens/Fifa 23.jpg" alt="Jogo FIFA 23"></a>
+        <a href="./html/dead-space.html" class="gallery-items"><img src="./imagens/DEAD-SPACE-REMAKE.avif" alt="Jogo Persona 5"></a>
+        <a href="./html/soulstice.html" class="gallery-items"><img src="./imagens/Soulstice.jpg" alt="Jogo Soulstice"></a>
+        <a href="./html/resident-evil-4.html" class="gallery-items"><img src="./imagens/Resident-Evil-4-Remake-9.jpg" alt="Jogo da disney"></a>
+        <a href="./html/Isonzo.html" class="gallery-items"><img src="./imagens/EGS_Isonzo_M2HBlackmillGames_S1_capa.jpg" alt="Jogo de guerra"></a>
+    </nav>
+
+    <!-- |=======================| -->
+    <!-- |  Parte final do site  | -->
+    <!-- |=======================| -->
+    <footer class="footer">
+        <div class="conteudo-footer">
+            <h3><a href="">Quem somos</a></h3>
+            <h3><a href="">Suporte</a></h3>
+            <h3><a href="">Política de devolução de produto</a></h3>
+            <h3><a href="">Política de privacidade</a></h3>
+        </div>
+    </footer>
+
+
+    <!-- |================| -->
+    <!-- |  Começo do JS  | -->
+    <!-- |================| -->
+
+
+    <script>
+
+
+
+        let count = 1;
+        document.getElementById("radio1").checked = true; //Retorna a referência do elemento através do seu ID.
+
+        // |========================================================|
+        // |  Fazer um intervalo para ficar passando infinitamente  |
+        // |========================================================|
+        setInterval(function(){  //O setInterval()método chama uma função em intervalos especificados (em milissegundos).
+            passarImagem()
+        }, 5000) // Esse número depois da vírgla é de quanto em quantos segundos as imagens vão ficar passando 
+
+
+
+        // Function para ir passando as imagens. Ela vai somar até dar 4, se passar volta para um
+        function passarImagem(){ // Chamo essa função dentro do setInterval
+            count++;
+            if(count > 4){
+                count = 1;
+            }
+
+            // Para mostrar o radio que no momento está checado, ele vai passando e vai checando o que está no momento
+            document.getElementById("radio" + count).checked = true;
+        }
+
+    </script>
+</body>
+</html>
